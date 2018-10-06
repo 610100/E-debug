@@ -139,6 +139,14 @@ BOOL CPage3::OnInitDialog() {
 
 	m_ICO.Add(AfxGetApp()->LoadIcon(IDI_ICON_ODBCProvider));  //Íâ²¿Êý¾Ý¿âÌá¹©Õß 41
 
+	m_ICO.Add(AfxGetApp()->LoadIcon(IDI_ICON_StatusBar));  //×´Ì¬Ìõ 42
+
+	m_ICO.Add(AfxGetApp()->LoadIcon(IDI_ICON_ToolBar));  //¹«¹²Ìõ 43
+
+	m_ICO.Add(AfxGetApp()->LoadIcon(IDI_ICON_ListView));  //³¬¼¶ÁÐ±í¿ò 44
+
+	m_ICO.Add(AfxGetApp()->LoadIcon(IDI_ICON_TransLabel));  //Í¸Ã÷±êÇ© 45
+
 	m_Tree.SetImageList(&m_ICO,TVSIL_NORMAL);
 
 	//¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª
@@ -387,7 +395,7 @@ BOOL CPage3::OnInitDialog() {
 				break;
 			default:
 				Window[i].ControlType.push_back("Î´Öª");
-				pMaindlg->outputInfo("%X", Window[i].ChildWindowId);
+				//pMaindlg->outputInfo("%X", Window[i].ChildWindowId);
 				break;
 			}
 		}
@@ -443,7 +451,6 @@ void CPage3::OnTvnSelchangingTree1(NMHDR *pNMHDR, LRESULT *pResult)  //¿Ø¼þ±»µ¥»
 
 
 	}
-	
 	
 
 	*pResult = 0;

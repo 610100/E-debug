@@ -40,8 +40,8 @@ UINT EAnalysis::AddSection(DWORD addr) {
 EAnalysis::EAnalysis(ULONG dwVBase,ULONG dwVsize)
 {
 	sectionAlloc textSection;
-
-	textSection.SectionAddr = (BYTE *)VirtualAlloc(NULL, dwVBase, MEM_COMMIT, PAGE_READWRITE); //申请最初的代码段空间
+	
+	textSection.SectionAddr = (BYTE *)VirtualAlloc(NULL, dwVsize, MEM_COMMIT, PAGE_READWRITE); //申请最初的代码段空间
 	textSection.dwBase = dwVBase;
 	textSection.dwSize = dwVsize;
 
@@ -70,6 +70,7 @@ BOOL EAnalysis::EStaticLibInit() {    //易语言静态编译 识别初始化
 	{
 		return FALSE;
 	}
+
 
 	dwCalc = dwResult + 0x26 + SectionMap[0].dwBase;
 	

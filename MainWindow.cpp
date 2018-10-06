@@ -74,7 +74,7 @@ BOOL CMainWindow::OnInitDialog() {
 	pEAnalysisEngine = new EAnalysis(uBase,uSize);   //初始化内存
 
 	if (pEAnalysisEngine->EStaticLibInit()) {    //易语言静态编译识别+初始化,识别失败返回false
-
+		
 		std::vector<std::string> krnlCmd =
 		{ "错误回调", "DLL命令", "三方支持库命令", "核心支持库命令",
 			"读取组件属性", "设置组件属性", "分配内存", "重新分配内存",
@@ -140,7 +140,7 @@ BOOL CMainWindow::OnInitDialog() {
 	
 
     m_page2.Create(IDD_PAGE2, &m_Tab);
-	m_page2.MoveWindow(&rc);
+   	m_page2.MoveWindow(&rc);
 
 	m_page3.Create(IDD_PAGE3, &m_Tab);
 	m_page3.MoveWindow(&rc);
